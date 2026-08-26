@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin : 0;
     background : #F5F5F5;
@@ -18,6 +24,10 @@ nav a {
     color: #222;
     padding: 6px 8px;
 }
+nav a:hover {
+    color: #555;
+    transition: color 0.2s ease;
+}
 main {
     padding : 24px ;
     max-width: 800px;
@@ -37,9 +47,22 @@ button {
     background: white;
     color: #222;
     border : none ;
+    cursor: pointer;
+    font-weight: 600;
+}
+button:hover {
+    background: #444;
+    color: white;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+h1, h2 {
+    margin-top: 0;
 }
 p {
     line-height: 1.5;
+}
+main p {
+    color: #444;
 }
 @media (max-width: 480px) {
     nav {
@@ -54,4 +77,10 @@ p {
     h1 {
         font-size: 1.75rem;
     }
+}
+.service-card {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
